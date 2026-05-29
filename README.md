@@ -48,3 +48,25 @@ python clash_setup.py 192.168.1.1 "vless://..." 123456 --binary G:\clash_setup\c
 | 查帮助 | `python clash_setup.py --help` |
 
 文件在 `G:\clash_setup\clash_setup.py`，同时同步到了 `C:\temp\clash_setup.py`。
+
+
+
+`clash_cache/` 目录还不存在——因为之前的完整测试走的是"复用路由器上的 `/etc/openclash/core/clash_meta`"路径，根本没触发本地下载，所以缓存目录从未被创建。
+
+**正式路径应该是：**
+
+```
+G:\clash_setup\clash_cache\mihomo-linux-mipsle-softfloat-v1.19.25.bin
+```
+
+
+
+
+
+### 手动下载 mihomo-linux-mipsle-softfloat-v1.19.25.bin
+```
+https://github.com/MetaCubeX/mihomo/releases/download/v1.19.25/mihomo-linux-mipsle-softfloat-v1.19.25.gz
+```
+下载后解压（.gz），改名放到 `G:\clash_setup\clash_cache\` 即可。
+
+---
